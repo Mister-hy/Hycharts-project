@@ -62,18 +62,18 @@
         // 设置小圆点大小
         symbolSize: 5,
         // 设置小圆点颜色
-        itemStyle:{
-          color:'#fff'
+        itemStyle: {
+          color: "#fff",
         },
         // 让小圆点显示数据
-        label:{
-          show:true,
-          fontSize:10
+        label: {
+          show: true,
+          fontSize: 10,
         },
         // 修饰我们区域填充的北京颜色
-        areaStyle:{
-          color:'rgba(238,197,102,0.6)'
-        }
+        areaStyle: {
+          color: "rgba(238,197,102,0.6)",
+        },
       },
     ],
   };
@@ -85,5 +85,59 @@
     myChart.resize();
   });
 })();
-//季度销售
-(function () {})();
+//季度销售  饼形图 半圆形 设置方式
+(function () {
+  // 1. 实例化对象
+  var myChart = echarts.init(document.querySelector(".gauge"));
+  // 2. 指定数据和配置
+  var option = {
+    series: [
+      {
+        name: "销售进度",
+        type: "pie",
+        radius: ["130%", "150%"],
+        // 移动位置 套住50%文字
+        center: ["48%", "80%"],
+        //是否启用防止标签重叠策略
+        //  avoidLabelOverlap: false,
+        labelLine: { normal: { show: false } },
+        // 饼形图的起始角度位180 注意不是旋转角度
+        startAngle:180,
+        // 鼠标经过不需要放大偏移图像
+        hoverOffset:0, 
+        data: [
+          {
+            value: 100,
+            itemStyle: {
+              // 颜色渐变#00c9e0->#005fc1
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                { offset: 0, color: "#00c9e0" }, // 0 起始颜色
+                { offset: 1, color: "#005fc1" }, // 1 结束颜色
+              ]),
+              // (x1,y2) 点到点 (x2,y2) 之间进行渐变
+            },
+          },
+          {
+            value: 100,
+            itemStyle: {
+              color: "#12274d",
+            },
+          },
+          {
+            value: 200,
+            itemStyle: {
+              color: "transparent",
+            },
+          },
+        ],
+      },
+    ],
+  };
+  // 3. 把数据和配置给实例对象
+  myChart.setOption(option);
+  // 当我们浏览器缩放的时候，图表也等比例缩放
+  window.addEventListener("resize", function () {
+    // 让我们的图表调用 resize这个方法
+    myChart.resize();
+  });
+})();
