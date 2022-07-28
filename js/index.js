@@ -78,7 +78,7 @@
   myChart.setOption(option);
   // 4. 当我们浏览器缩放的时候，图表也等比例缩放
   window.addEventListener("resize", function () {
-    // 让我们的图表调用 resize这个方法
+  // 让我们的图表调用 resize这个方法
     myChart.resize();
   });
 })();
