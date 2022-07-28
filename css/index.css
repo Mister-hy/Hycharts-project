@@ -578,3 +578,34 @@ font-weight: normal;
   width: 100%;
   height: 100%;
 }
+/* 用户统计模块 */
+.users{
+  height: 340px;
+  display: flex;
+}
+.users .chart{
+  display: flex;
+  margin-top: .3rem;
+}
+.uesers .bar{
+  width: 7.35rem;
+  height: 3rem;
+}
+.users .data{
+  display: flex;
+  flex-direction: column;
+  height: 2.1rem;
+  box-sizing: border-box;
+  background-image: url(../images/rect.png);
+  background-size: cover;
+}
+.users h4{
+  margin-bottom: .15rem;
+  font-size: .35rem;
+  color: #fff;
+}
+.users span{
+  display: block;
+  color: #4c9bfd;
+  font-size: .2rem;
+}
