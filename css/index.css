@@ -51,6 +51,13 @@ body {
     font-size: 80px !important;
   }
 }
+.showTime{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: #fff;
+  font-size: .25rem;
+}
 .viewport{
   display: flex;
   min-width: 1024px;
@@ -58,14 +65,15 @@ body {
   margin: 0 auto;
   background: url('../images/logo.png') no-repeat 0 0 / contain;
   min-height: 780px; 
-  padding: 1.1rem .25rem 0;
+  padding: 1.9rem .25rem 0;
 }
 .viewport .column{
   flex:3;
   /* background-color: skyblue; */
 }
 .viewport .column:nth-child(2){
-  flex:4
+  flex:4;
+  padding:0 .25rem;
 }
 
 /* 公共面板样式*/
@@ -424,8 +432,8 @@ font-weight: normal;
   position: relative;
 }
 .top .all {
-  /* display: flex; 
-  flex-direction: column; */
+  display: flex; 
+  flex-direction: column;
   width: 2.1rem;
   /* float: left; */
   color: #4c9bfd;
@@ -456,7 +464,7 @@ font-weight: normal;
   width: 4.5rem;
   position: absolute;
   top: .25rem;
-  left: 50%;
+  left: 48%;
   flex-direction: column;
   color: #fff;
 }
@@ -554,10 +562,10 @@ font-weight: normal;
 }
 /* 地图模块制作 */
 .map{
-  height: 7.225rem;
-  margin-bottom: .25rem;
   display: flex;
   flex-direction: column;
+  height: 7.225rem;
+  margin-bottom: 0.25rem;
 }
 .map h3{
   line-height: 1;
@@ -587,7 +595,7 @@ font-weight: normal;
   display: flex;
   margin-top: .3rem;
 }
-.uesers .bar{
+.users .bar{
   width: 7.35rem;
   height: 3rem;
 }

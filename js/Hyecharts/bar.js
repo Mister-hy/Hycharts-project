@@ -1,4 +1,4 @@
-// 用户统计模块 
+// 用户统计模块
 (function() {
   var item = {
     name: "",
@@ -20,7 +20,8 @@
   };
   // 1. 实例化对象
   var myChart = echarts.init(document.querySelector(".bar"));
-  console.log(myChart);
+
+  // console.log(myChart);
   // 2. 指定配置和数据
   var option = {
     color: new echarts.graphic.LinearGradient(
@@ -141,3 +142,4 @@
     myChart.resize();
   });
 })();
+

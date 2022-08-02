@@ -72,7 +72,7 @@
   // 2 根据数据渲染各省热销 sup 模块内容
   var supHTML = "";
   $.each(hotData, function (index, item) {
-    console.log(item);
+    // console.log(item);
     supHTML += `<li><span>${item.city}</span><span> ${item.sales} <s class=
     ${item.flag ? "icon-up" : "icon-down"}></s></span></li>`;
   });
@@ -125,7 +125,7 @@
 
   $(".province .sup").hover(
     // 鼠标经过事件
-    function() {
+    function() {7
       clearInterval(timer);
     },
     // 鼠标离开事件
